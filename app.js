@@ -16,16 +16,9 @@ const app = Vue.createApp(
     {
         validateInput(event) 
         {
-            // Get the value from the input event
             const inputValue = event.target.value;
-
-            // Use a regex to allow only valid number and decimal
             const validValue = inputValue.replace(/[^0-9.]/g, '').replace(/(\..*?)+/g, '$1').replace(/^0+(?=\d)/, '');
-
-            // Set the price to the valid value
             this.price = validValue;
-
-            // Trigger calculation for the valid input only if it's not empty
             this.calculate();
         },
         calculate() 
