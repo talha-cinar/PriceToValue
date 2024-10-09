@@ -30,9 +30,9 @@ const app = Vue.createApp(
                 this.calculatedValue = (priceValue * 10000) / (115 * 107);                        
                 this.VAT = priceValue * 15 / 115;
                 this.TLLevy = this.calculatedValue / 100;
-                this.GetFundLevy = this.calculatedValue / 40;
+                this.GetFundLevy = this.calculatedValue / 40; // 2.5% = 1/40
                 this.CovidLevy = this.calculatedValue / 100;
-                this.NHIL = this.calculatedValue / 40;
+                this.NHIL = this.calculatedValue / 40;        // 2.5% = 1/40
             } 
             else 
             {
