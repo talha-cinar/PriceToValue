@@ -27,12 +27,12 @@ const app = Vue.createApp(
 
             if (!isNaN(priceValue)) 
             {
-                this.calculatedValue = (priceValue * 10000) / (115 * 107);                        
-                this.VAT = priceValue * 15 / 115;
+                this.calculatedValue = (priceValue * 1000) / 1229;                        
+                this.VAT = this.calculatedValue * 0.159;        // VAT = value * 106/100 * 15/100
                 this.TLLevy = this.calculatedValue / 100;
-                this.GetFundLevy = this.calculatedValue / 40; // 2.5% = 1/40
+                this.GetFundLevy = this.calculatedValue / 40;   // 2.5%= 1/40
                 this.CovidLevy = this.calculatedValue / 100;
-                this.NHIL = this.calculatedValue / 40;        // 2.5% = 1/40
+                this.NHIL = this.calculatedValue / 40;          // 2.5%= 1/40
             } 
             else 
             {
